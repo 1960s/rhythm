@@ -1,0 +1,280 @@
+
+PHYSICS RHYTHM
+ratio permutations and fourier transform
+patterns wave lengths rhythms tones colors shapes
+squaring and cubing patterns representing different dimensions
+binary and ternary
+godfried toussaint
+deep cloning
+euclidean strings may used from binary, syncopated may be more accurate
+document like necklace page with references to toussaint's book pages and lines included
+
+not having an html/body tag caused page to display a^a symbols instead of `⚫`.
+
+collecting resources for rhythms resource, look at how to write a book and document content.
+have a requirement for rhythms such as one instrument only and pop music, use billboard hit songs or children's songs in category traditional and folk music
+
+ehtan hein
+tyler billson
+reddit
+david aldridge
+ho cho ho
+http://musicnotation.org/wiki/rhythm-notation/rhythm-notation-overview/
+
+finding different rhythms cultures names and groupings
+
+
+rhythm research
+Rhythm Genome Project
+Classified Catalog of Rhythms
+Rhythm Taxonomy
+The Every-Beat-Ever
+Catalogue of Rhythms
+The Beat Encyclopedia
+
+
+wide tuning, multiple voices near pitch
+layer instruments slightly flat and sharp, to cover up flaws of equal temperment, sweeping under the rug
+certain instruments are better at playing chords and scales,
+countering the effects of equal temperment, how instrument is strummed to remove potentially inharmonic notes of equal temperment
+you can overdub notes for just intonation work
+ex. twang vs feathery might be better at minor scales and playing chords in a way to reduce onvertones that don't exist in scale.
+bending on the guitar, bending on chords, compensate equal temperament
+3 khz ideal tone for human ear
+drum pulse variations chord construction
+
+
+
+what melody is to harmony: rhythm is to polyrhythm
+read up on 
+taxonomy morphology phylogently ontology classification
+pattern types
+jason davies and data visualization
+
+create methods for functions defined and then chain
+deep cloning
+possible to generate arrays from object for stringfy
+euclidean strings may used from binary, syncopated may be more accurate
+comment on functions, more descriptive
+
+underlying scales in tones as pulse is to rhythm
+dividing tones from root to octave into divisuble tones. ex, 12 tones or 16 tones or 8
+then make ratios to create melody and chords, similar to pulse in rhythm groups
+balancing equations
+timbre chords
+
+// rhythmic oddity = even pulse rhythms where opposite always 0 when 1.
+    //can also measure degree of rhythmic oddity, pulses / 2 is least value
+    // oddity is dependent on composition grouping also necklace.
+//offbeatness = counter of 1's that land on offbeat indexes
+//complementary rhythms = inverse rhythms played together, must be even pulses
+    //homometric rhythms = the inverse is a rotation of the original
+Divisive rhythm versus additive rhythm
+music notation as sustained vs single note
+
+RHYTHM TABLE & PDF
+print pdf's of drum rhythms
+create more categories from toussaint's book
+
+	CATEGORIES
+	Pulse
+	Beat
+	Start //Downbeat or Syncopated
+
+	Partition
+	Necklaces //of the same rotation
+	Bracelets 
+	Comp Group
+	Composition //includes syncopations
+
+	Mirrors
+	Inverse
+	Mirrors & Inverse
+
+	Inner Mirrors //Palindrome //add an even and odd version
+	Inner Inverse
+	Inner Mirrors & Inverse
+
+	Reducables/Expandables //1:2 is the same 2:4
+	Breakables
+
+	Euclidean Rhythms
+	Euclidean Rhythm Groups //of the same necklace as euclidean rhythm
+	Euclidean Strings
+	Euclidean Reverse Strings
+
+
+	Golden Rhythms //what is qualification
+	Shadow Rhythms
+
+	Compound or Duple or Odd
+	Even or Odd or Mixed
+	Pure Symmetry(refers) or Symmetry or Asymmetry 
+//rhythms that have less than half the number of beats to rhythms
+most likely a quarter + 1, ex 8 pulse is 3 beats, 16 pulse is 5 beats
+
+	Equivalent tones when rhythm is sped up, perfect 5th is a 2:3 polyrhythm or 6 pulses = 2112 
+
+
+RHYTHM FILTER & VISUALIZER
+use breakbeat book ethan hein
+	can make strong and weak patterns, note groupings
+	change notation
+	counting custom
+	color coding instruments, bass hi hat snare trumpet
+	make a slider for quick filter
+	can bold counting for shortest notation 1 is bold -e -+ -a
+	bass and snare and silence for 3 variables red white and blue or custom colors, custom can be problem
+	syllable in sounds, consonants and vowel possible, tih tah tih teh tah boo ho
+	make an adjustable rhythm for different mathematical ratios, silver ratio,
+	visual tree structure of rhythms
+	visual rhythm book https://en.wikipedia.org/wiki/Bell_number
+	Custom boxes for counting methods, 1 e and a can be tik a tok a
+	Sticking types first, can't do all sticking, too many outcomes, for 8 pulse left and right are 256 combos
+	standard such as paradiddles and paradiddlediddles
+	Searchable rhythms
+
+RHYTHM PROFILER & WORKOUT SESSIONS
+
+make into updateable pwa, use as desktop app gets updated
+
+	Safi al-Din al-Urmawi
+	his book of Rhythms : Risalah al-Sharafiyah fi al-Nisab al-Ta'lifiyyah
+	list rhythms specifics by space and time and genre.
+
+
+use popular music
+show which instrument is using rhythm and is percussion name the instruments used such bass/snare or hi/bass or bass
+if instrument is vocals, then you can input string of syllables which then gets placed on each of 1's in rhythm
+ex, 110100 110100 1000 is equal to  I like dirt I like dirt I like
+chromeextension vs pwa, pwa gets updated but is removed with a clear browsing data.
+list upsides and downsides on website 
+
+have explanation metadata on catalog and what your output will look like.
+Have this done on a form and you can upload pictures to create a new page for content.
+Desktop PWA
+Downloadable pdf
+common name
+search engine
+
+
+
+isomorhpic connection between tones and rhythmsconnection 
+core groups
+essence of rhythm 1
+234
+5678
+9 10 11 12
+13 14 15 16
+
+linear and circular
+support for other languages
+use pulse rhythms as showcase of database
+musiciologists
+documentation
+show expandables types 112 is also 224 and 336 
+use midi file patterns and popular drum rhythms for initial
+Everything's Alright is 6/15 231333
+
+can rotate the rhythm to look at others within necklace.
+Interesting facts about pulses and beats
+12 pulse rhythms are most common in afro-cuban and sub saharan africa
+
+convert spreadsheet into json then build webpage
+
+	workout sessions can begin a spiral of simple to complex rhythms, 
+	then can start from beginning, each section holds a detailed profile of each rhythm
+	move from necklace to rhythm
+	create hierachy of rhythms and relationships
+	make rhythms resizable, initially big so can see on computer screen from far away.
+	then a profile for each rhythm
+
+	Examples of songs with rhythms used 
+	Can use common name such as bossa nova, bo diddelly also known as
+	fool in the rain and rosanna, general rhythms and the specific examples
+	splash graphic for each rhythm, include artists that popularized rhythm
+	shadow, sibling, shadow siblings
+	show time and place of origin, maybe have map and songs associated with rhythm, son clave in brazil, sample songs from culture
+	bo diddely in america, i want candy the strangeloves 1950s
+
+	MIDI PLAYER
+	sound midi mixer to play along with rhythms, add midi from songs to go with it, can play midi, play along simple rhythm
+	write program to practice every rhythm, checklist of ones completed, level 1 - 16, tier 1-4, tier 1 is 1-4.
+	select favorite artists and their song patterns used
+	interactive, will play beat in realtime, can online tools
+
+	VISUALIZATIONS
+	create visualizations of partitions and pulse grouping for rhythms. 
+	defining structures in shapes arch as 43234 or 23432, use a histogram position and content, template structures
+
+
+
+Rhythm	Song	Artist	Genre	Year
+101001100100100	Everything's Alright	Andrew Lloyd Weber	Movie/Musical	1970
+1101001101001000	I Like Dirt	Red Hot Chili Peppers	Rock	1980
+1001001001001010	Arms Wide Open	Creed	Rock	2000
+
+
+Ratios at the macro meso and micro level
+framework for music
+macro is a 1:1:1 ratio
+then meso is 1:2
+micro is 3:3:2
+
+SWING LEVEL
+swing types
+behind snare heavier feel loosening
+5m grooving 10m in the pocket 15m pulling back 22m dragging
+front of snare lighter feel tightening
+5m snap 10m driving or with an edge 30m nervous
+3:1 at 100
+2:5 at 150
+2:1 at 200
+1:5 at 250
+1:1 at 300
+
+
+
+BALANCING THE EQUATION
+click button to show mirror next to rhythm, balance define structure quality
+
+
+Tone.js
+https://apps.musedlab.org/groovepizza/?
+https://musiclab.chromeexperiments.com/Experiments
+https://musedlab.org/groovepizza/
+https://mathsciencemusic.org/#/project/academic-music
+
+
+THEORY and patterns
+decorative additions
+tempo or speed, like different gears in a car, the tradeoff between speed and loudness/power.
+velocity or loudness heavy and light
+sticking or timbre, simultaneous vs alternating vs single, rhythm threading
+
+PRACTICE and technique
+finger wrist elbow shoulder
+toe ankle knee thigh
+grip german american french
+stick type brush stick mallet
+bouncing up and down in and out side to side three dimensions of movement
+pushing and pulling fingers and wrist, moeller method wrist elbow and shoulder,
+straight back and breathing
+
+hi hat
+chick
+splash
+sizzle
+stomp
+
+bass
+buried head
+released head
+feathering
+ring the drum
+
+bouncing the ball creating a sense of momentum in the music, the feeling of stopping and starting, sound and silence
+
+
+
+

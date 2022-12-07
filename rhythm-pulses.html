@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+	    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <!-- CODELAB: Add description here -->
+<meta name="description" content="A rhythm catalog app">
+
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <link rel="manifest" href="manifest.webmanifest">
+  
+    <title>Rhythm Factory</title>
+	
+  </head>
+
+  <body>
+<style>
+  @font-face {
+    font-family: "muse";
+    src: url("Rhyth.otf");
+  }
+
+
+  .muse {
+    font-size: 30px;
+    font-family: "muse"
+  }
+
+.breaker {
+break-after: page;
+}
+
+  .big {
+    font-size: 30px;
+  }
+
+  .call {
+    columns: 6;
+  }
+
+  a {
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  table {
+    table-layout: auto;
+    border: 2px solid #c6c6c6;
+    width: 100%;
+    text-align: center;
+
+  }
+
+
+  tr:nth-child(2n+1) { 
+    background-color: #f9f9f9;
+  }
+
+  .fun {
+    background-color: rgb(234 234 234) !important;
+  }
+
+  td, th {
+    margin: 0;
+    padding: .5em .7em;
+    border-bottom: 1px solid #c6c6c6;
+
+  }
+
+  td:nth-child(4) {
+        text-align: left;
+
+  }
+
+  td:nth-child(1) {
+        width: 5%;
+
+  }
+
+  td:nth-child(2) {
+        width: 5%;
+}
+
+  td:nth-child(3) {
+        width: 5%;
+  }
+
+</style>
+
+<!--<button onclick="brush()">texthere</button>-->
+<!--<textarea rows="30" cols="50" id=""></textarea>-->
+<div id="stamp" ></div>
+
+
+<script>
+
+    let stamp = document.getElementById("stamp")
+</script>
+
+    <script src="scripts/rhythm-data.js" ></script>
+    <script src="scripts/rhythm-function.js" ></script>
+    <script src="scripts/rhythm-master.js" ></script>
+
+<script>
+
+    //table maker
+
+/*
+<th>reduced</th>
+<th>break</th>
+
+<th>eucs</th>
+<th>euc2</th>
+<th>reBool</th>
+<th>breakBool</th>
+<th>pali</th>
+*/
+
+let pali = []
+let indy = []
+let sam = ""
+let rug = 0
+
+indy.push(`
+
+<h1  id="index" style="text-align:center">INDEX PAGE</h1>
+<br>
+<br>
+<br>
+<div class="call">
+`)
+
+    for (let i = 0; i < next.length; i++) {
+
+if(pulses[i][0] != rug){
+
+if(pulses[i][0] > 4){
+indy.push(`
+<div class="breaker"></div>
+`)
+}
+
+indy.push(`
+<b><u>${pulses[i][0]} Pulse Necklaces</u></b>
+`)
+rug++
+}
+
+
+indy.push(`
+<p><a href="#${necklaces[i][0]}">
+  ${necklaces[i][0]}
+</a></p>
+`)
+
+
+pali.push(`
+<br>
+<br>
+<br>
+<span class="big">Pulse: ${pulses[i][0]}</span>
+<br>
+<span class="big">Beat: ${beats[i][0]}</span>
+<br>
+<span id="${necklaces[i][0]}" class="big">Necklace: ${necklaces[i][0]}</span>
+<br>
+<br>
+<br>
+`)
+
+
+pali.push(`<table>`)
+
+pali.push(`
+<tr class="fun">
+<th>start</th>
+<th>paint</th>
+<th>rhythms</th>
+<th>fill in</th>
+
+</tr>
+`)
+
+
+
+      for (let j = 0; j < next[i].length; j++) {
+let data = `
+<tr>
+<td>${starts[i][j]}</td>
+<td>${paints[i][j]}</td>
+<td>${RAW2[i][j]}</td>
+<td></td>
+</tr>
+`
+
+//if (palindromes2[i][j] == true){
+
+
+pali.push(data)
+
+
+ //}
+
+
+    }
+
+pali.push(`</table>`)
+
+pali.push(`
+<br>
+<a href="#index">
+&#10548; back to index
+</a>
+`) 
+
+pali.push(`<div class="breaker"></div>`)
+
+
+
+}
+
+
+
+indy.push(`
+</div>
+
+<div class="breaker"></div>
+`)	
+
+
+
+</script>
+
+
+<script>
+    stamp.innerHTML = indy.join("\n") + pali.join("\n")
+  
+</script>
+<!--
+<td>${reduced[i][j]}</td>
+<td>${breakables[i][j]}</td>
+
+
+<td>${euclideans[i][j]}</td>
+<td>${euclideans2[i][j]}</td>
+<td>${reducedBool[i][j]}</td>
+<td>${breakablesBool[i][j]}</td>
+<td>${palindromes[i][j]}</td>
+
+-->
+
+
+
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

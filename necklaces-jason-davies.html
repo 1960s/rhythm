@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://www.jasondavies.com/necklaces/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Combinatorial Necklaces and Bracelets - Jason Davies</title>
+
+<link rel="image_src" href="https://www.jasondavies.com/necklaces/necklaces.png">
+<style>
+
+html, body { font-family: sans-serif; }
+body { width: 770px; margin: 2em auto; }
+line { stroke: #000; }
+circle { stroke: #000; fill: none; }
+#n, #k { width: 30px; }
+
+</style>
+
+</head><body><h1>Combinatorial Necklaces and Bracelets</h1>
+
+<p>A <a href="http://mathworld.wolfram.com/Necklace.html">combinatorial necklace</a>
+  is a circle of <em>n</em> coloured beads, with up to <em>k</em> different
+  colours.
+
+</p><p>If we think of a necklace as a string of <em>n</em> characters from an
+  alphabet of size <em>k</em>, we can say that two strings are equivalent if one
+  can be rotated to be the same as the other i.e. <em>aabb = abba = bbaa = baab</em>.
+
+</p><p>A bracelet is a necklace that can be turned over i.e. strings are equivalent
+  under reversal e.g. <em>abcd = dcba</em>.
+
+</p><p>Below you can see all unique necklaces or bracelets given <em>n</em> and <em>k</em>.
+
+</p><p>
+  <label for="n">n:</label> <input type="number" id="n" value="2" min="1">
+  <label for="k">k:</label> <input type="number" id="k" value="3" min="1">
+  <label for="b"> <input type="checkbox" id="b" value="1" checked=""> bracelets</label>
+
+</p><p>Total: <span id="count">6</span>
+
+</p><div id="vis"><svg width="761" height="101.5"><g transform="translate(32,32)"><g transform="translate(0,0)"><circle cy="26.5" r="26.5"></circle><circle class="bead" r="5" transform="rotate(0 0,26.5)" style="fill: rgb(0, 0, 0);"></circle><circle class="bead" r="5" transform="rotate(180 0,26.5)" style="fill: rgb(0, 0, 0);"></circle></g><g transform="translate(75,0)"><circle cy="26.5" r="26.5"></circle><circle class="bead" r="5" transform="rotate(0 0,26.5)" style="fill: rgb(0, 0, 0);"></circle><circle class="bead" r="5" transform="rotate(180 0,26.5)" style="fill: rgb(255, 255, 255);"></circle></g><g transform="translate(150,0)"><circle cy="26.5" r="26.5"></circle><circle class="bead" r="5" transform="rotate(0 0,26.5)" style="fill: rgb(0, 0, 0);"></circle><circle class="bead" r="5" transform="rotate(180 0,26.5)" style="fill: rgb(0, 0, 255);"></circle></g><g transform="translate(225,0)"><circle cy="26.5" r="26.5"></circle><circle class="bead" r="5" transform="rotate(0 0,26.5)" style="fill: rgb(255, 255, 255);"></circle><circle class="bead" r="5" transform="rotate(180 0,26.5)" style="fill: rgb(255, 255, 255);"></circle></g><g transform="translate(300,0)"><circle cy="26.5" r="26.5"></circle><circle class="bead" r="5" transform="rotate(0 0,26.5)" style="fill: rgb(255, 255, 255);"></circle><circle class="bead" r="5" transform="rotate(180 0,26.5)" style="fill: rgb(0, 0, 255);"></circle></g><g transform="translate(375,0)"><circle cy="26.5" r="26.5"></circle><circle class="bead" r="5" transform="rotate(0 0,26.5)" style="fill: rgb(0, 0, 255);"></circle><circle class="bead" r="5" transform="rotate(180 0,26.5)" style="fill: rgb(0, 0, 255);"></circle></g></g></svg></div>
+
+<h2>Further Reading</h2>
+<ul>
+  <li>To generate the necklaces, I used the “FKM algorithm” due to Fredricksen, Kessler and Maiorana.
+  </li><li>For the bracelets, I used the algorithm described in Joe Sawada’s <a href="http://dl.acm.org/citation.cfm?id=586928">Generating Bracelets in constant amortized  time</a>.
+  </li><li><a href="http://mathworld.wolfram.com/Necklace.html">Necklace</a> on MathWorld.
+  </li><li><a href="http://en.wikipedia.org/wiki/Necklace_%28combinatorics%29">Necklace (combinatorics)</a> on Wikipedia.
+  </li><li><a href="http://www.theory.csc.uvic.ca/~cos/inf/neck/NecklaceInfo.html">Information on necklaces, unlabelled necklaces, Lyndon words, De Bruijn sequences</a>.
+  </li><li><a href="http://undergraduate.csse.uwa.edu.au/units/CITS7209/polya.pdf">Pólya Counting I</a> (PDF).
+</li></ul>
+
+<script src="scripts/d3.min.js"></script>
+<script src="scripts/necklaces.js"></script>
+<p class="copyright">© <a href="http://www.jasondavies.com/">Jason Davies</a> 2012.
+</p></body></html>

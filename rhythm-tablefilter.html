@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+	    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <!-- CODELAB: Add description here -->
+<meta name="description" content="A rhythm catalog app">
+
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <link rel="manifest" href="manifest.webmanifest">
+  
+    <title>Rhythm Factory</title>
+	
+  </head>
+  <body>
+  
+  <style>
+  html { 
+    overflow-y: scroll;
+  }
+
+
+  body {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+  body {
+    opacity: 1;
+height:1000px;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+	  
+	   @font-face {
+      font-family: "muse";
+      src: url("Rhyth.otf");
+    }
+  
+  
+  .muse {
+    font-size: 30px;
+    font-family: "muse"
+  }
+
+tr.brk { 
+  break-after: page; 
+} 
+</style>
+
+<script>document.body.className += 'fade-out';</script>
+
+    
+<div id="stamp"></div>
+
+
+
+<script>
+
+    let stamp = document.getElementById("stamp")
+</script>
+
+    <script src="scripts/rhythm-data.js" ></script>
+    <script src="scripts/rhythm-function.js" ></script>
+    <script src="scripts/rhythm-master.js" ></script>
+    <script src="scripts/rhythm-output-table-filter.js" ></script>
+
+<script>
+    stamp.innerHTML = mow.join("\n")
+  
+</script>
+
+
+<script src="tablefilter/tablefilter.js"></script>
+
+<script data-config>
+    var tfConfig = {
+        base_path: 'tablefilter/',
+
+                    auto_filter: {
+            delay: 0 //milliseconds
+        },
+        // filter types
+col_0: "checklist",
+        col_1: "checklist",
+        col_2: "checklist",
+
+               col_3: "checklist",
+col_4: "checklist",
+col_5: "checklist",
+col_6: "checklist",
+col_7: "checklist",
+col_8: "checklist",
+col_9: "checklist",
+col_10: "checklist",
+col_11: "checklist",        
+col_12: "checklist",
+col_13: "checklist",
+col_14: "checklist",
+col_15: "checklist",
+col_16: "checklist",          
+        
+        
+        
+
+        // column types
+        col_types: [
+            'string', 'string', 'string',
+            'string', 'number', 'number',
+            
+        ],
+
+        // filters and headers position
+        filters_row_index: 1,
+       
+                        sticky_headers: true,
+        state: { types: ['local_storage']},
+        popup_filters: false,
+
+        alternate_rows: true,
+        rows_counter: true,
+        btn_reset: true,
+        status_bar: true,
+        ignore_diacritics: true,
+        no_results_message: true,
+        enable_empty_option: false,
+        enable_non_empty_option: false,
+        loader: false,
+        mark_active_columns: false,
+        highlight_keywords: false,
+        
+         // theme
+        themes: [{ name: '' }],
+        
+
+        // sorting extension
+        extensions: [{ name: 'sort' }]
+    };
+    var tf = new TableFilter('grouped-headers', tfConfig, 2);
+    tf.init();
+</script>
+<script>
+window.setTimeout(function (){
+ return document.body.classList.remove('fade-out');
+}, 0);
+
+</script>
+<hr>
+
+  </body>
+
+</html>

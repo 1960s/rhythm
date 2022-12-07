@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+	    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <!-- CODELAB: Add description here -->
+<meta name="description" content="A rhythm catalog app">
+
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <link rel="manifest" href="manifest.webmanifest">
+  
+    <title>Rhythm Factory</title>
+	
+  </head>
+
+  <body>
+
+<style>
+  @font-face {
+    font-family: "muse";
+    src: url("Rhyth.otf");
+  }
+
+
+  .muse {
+    font-size: 30px;
+    font-family: "muse"
+  }
+
+.breaker {
+break-after: page;
+}
+
+  .big {
+    font-size: 30px;
+  }
+
+  .call {
+    columns: 6;
+  }
+
+  a {
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  table {
+    table-layout: auto;
+    border: 2px solid #c6c6c6;
+    width: 100%;
+    text-align: center;
+
+  }
+
+
+  tr:nth-child(2n+1) { 
+    background-color: #f9f9f9;
+  }
+
+  .fun {
+    background-color: rgb(234 234 234) !important;
+  }
+
+  td, th {
+    margin: 0;
+    padding: .5em .7em;
+    border-bottom: 1px solid #c6c6c6;
+
+  }
+
+
+
+  td:nth-child(1) {
+        width: 5%;
+
+  }
+
+  td:nth-child(2) {
+        width: 5%;
+}
+
+  td:nth-child(3) {
+        width: 5%;
+  }
+
+
+  td:nth-child(4) {
+        text-align: left;
+
+  }
+
+  td:nth-child(5) {
+        text-align: left;
+
+  }
+
+  td:nth-child(6) {
+        text-align: left;
+
+  }
+
+  td:nth-child(7) {
+        text-align: left;
+
+  }
+</style>
+
+<--<button onclick="brush()">texthere</button>-->
+<!--<textarea rows="30" cols="50" id=""></textarea>-->
+<div id="stamp" ></div>
+
+
+<script>
+
+    let stamp = document.getElementById("stamp")
+</script>
+
+    <script src="scripts/rhythm-data.js" ></script>
+    <script src="scripts/rhythm-function.js" ></script>
+    <script src="scripts/rhythm-master.js" ></script>
+
+
+<script>
+
+
+    //table maker
+
+
+
+
+
+
+/*
+<th>reduced</th>
+<th>break</th>
+
+<th>eucs</th>
+<th>euc2</th>
+<th>reBool</th>
+<th>breakBool</th>
+<th>pali</th>
+*/
+
+
+let indy = []
+let rug = 0
+
+let names = [
+"Palindromes",
+"Palindromes2",
+
+"Euclideans",
+"Euclideans2",
+
+"Euclideans Strings Reversed",
+"Euclideans Strings",
+
+]
+
+let pali = []
+let pali2 = []
+let euc = []
+let euc2 = []
+
+let eucStrRev = []
+let eucStr = []
+let reduc = []
+let breakab = []
+
+let eucMix = []
+let euc2Mix = []
+
+let arrays = [
+pali,
+pali2,
+
+euc,
+euc2,
+
+eucStrRev,
+eucStr,
+
+]
+
+let bools = [
+palindromes,
+palindromes2,
+
+euclideans,
+euclideans2,
+
+euclideansStrRev,
+euclideansStr,
+
+]
+
+
+
+function indexer(name){
+indy.push(`
+<a href="#${name}">
+${name}
+</a>
+<br>
+`)
+}
+
+
+indy.push(`
+
+<h1  id="index" style="text-align:center">INDEX PAGE</h1>
+<br>
+<br>
+<br>
+`)
+
+names.forEach(el => indexer(el))
+indexer("EUCMIX")
+indexer("EUC2MIX")
+
+//indexer("Reducables")
+//indexer("Breakables")
+
+
+indy.push(`
+<div class="breaker"></div>
+`)	
+
+////////////////
+
+let heads = `
+<table>
+<tr class="fun">
+<th>pulses</th>
+<th>beats</th>
+<th>start</th>
+<th>paint</th>
+<th>rhythms</th>
+<th>necklaces</th>
+</tr>
+`
+/*
+let headsRe = `
+<table>
+<tr class="fun">
+<th>pulses</th>
+<th>beats</th>
+<th>start</th>
+<th>paint</th>
+<th>reduced</th>
+<th>rhythms</th>
+<th>necklaces</th>
+</tr>
+`
+
+let headsBr = `
+<table>
+<tr class="fun">
+<th>pulses</th>
+<th>beats</th>
+<th>start</th>
+<th>paint</th>
+<th>breakables</th>
+<th>rhythms</th>
+<th>necklaces</th>
+</tr>
+`
+*/
+
+let tails = `
+</table>
+<br>
+<a href="#index">
+&#10548; back to index
+</a>
+<div class="breaker"></div>
+`
+
+
+
+
+function titler(arr, name){
+arr.push(`
+<br>
+
+<span id="${name}">${name}</span>
+<br>
+<br>
+<br>
+`
+)
+
+}
+
+function stuff(arr, text){
+arr.push(text)
+}
+
+
+
+
+function sifter(boolean, arr, data){
+
+if (boolean == true){
+	arr.push(data)
+}
+
+}
+
+
+arrays.forEach((el, i) => titler(el, names[i]))
+arrays.forEach(el => stuff(el, heads))
+
+titler(eucMix, "EUCMIX")
+titler(euc2Mix, "EUC2MIX")
+stuff(eucMix, heads)
+stuff(euc2Mix, heads)
+
+/*
+titler(reduc, "Reducables")
+titler(breakab, "Breakables")
+stuff(reduc, headsRe)
+stuff(breakab, headsBr)
+*/
+
+    for (let i = 0; i < next.length; i++) {
+
+
+      for (let j = 0; j < next[i].length; j++) {
+
+let data = `
+<tr>
+<td>${pulses[i][j]}</td>
+<td>${beats[i][j]}</td>
+<td>${starts[i][j]}</td>
+<td>${paints[i][j]}</td>
+<td>${RAW2[i][j]}</td>
+<td>${necklaces[i][j]}</td>
+</tr>
+`
+/*
+let dataRedu = `
+<tr>
+<td>${pulses[i][j]}</td>
+<td>${beats[i][j]}</td>
+<td>${starts[i][j]}</td>
+<td>${paints[i][j]}</td>
+<td>${reduced[i][j]}</td>
+<td>${RAW2[i][j]}</td>
+<td>${necklaces[i][j]}</td>
+</tr>
+`
+
+let dataBreak = `
+<tr>
+<td>${pulses[i][j]}</td>
+<td>${beats[i][j]}</td>
+<td>${starts[i][j]}</td>
+<td>${paints[i][j]}</td>
+<td>${breakables[i][j]}</td>
+<td>${RAW2[i][j]}</td>
+<td>${necklaces[i][j]}</td>
+</tr>
+`
+*/
+
+bools.forEach((el, k) => sifter(el[i][j], arrays[k], data))
+
+
+if (euclideans[i][j] == true 
+&& euclideans2[i][j] == false){
+	eucMix.push(data)
+}
+
+if (euclideans2[i][j] == true 
+&& euclideans[i][j] == false){
+	euc2Mix.push(data)
+}
+
+
+
+
+
+/*
+if (reducedBool[i][j] == true){
+	reduc.push(dataRedu)
+}
+
+if (breakablesBool[i][j] == true){
+	breakab.push(dataBreak)
+}
+*/
+
+    }
+
+}
+
+
+arrays.forEach(el => stuff(el, tails))
+stuff(eucMix, tails)
+stuff(euc2Mix, tails)
+//stuff(reduc, tails)
+//stuff(breakab, tails)
+
+
+let boolTable = ""
+function joiner(arr){
+
+boolTable += arr.join("\n")
+
+}
+
+arrays.forEach(el => joiner(el))
+boolTable += eucMix.join("\n")
+boolTable += euc2Mix.join("\n")
+//boolTable += reduc.join("\n")
+//boolTable += breakab.join("\n")
+
+</script>
+
+<script>
+    stamp.innerHTML = indy.join("\n") + boolTable
+  
+</script>
+
+<!--
+<td>${reduced[i][j]}</td>
+<td>${breakables[i][j]}</td>
+
+
+<td>${euclideans[i][j]}</td>
+<td>${euclideans2[i][j]}</td>
+<td>${reducedBool[i][j]}</td>
+<td>${breakablesBool[i][j]}</td>
+<td>${palindromes[i][j]}</td>
+
+-->
+
+
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

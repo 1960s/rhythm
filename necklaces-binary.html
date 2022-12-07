@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://www.jasondavies.com/necklaces/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Rhythm Necklaces</title>
+
+
+  <style>
+
+    html, body { font-family: sans-serif; }
+    body { width: 770px; margin: 2em auto; }
+    line { stroke: #000; }
+    circle { stroke: #000; fill: none; }
+    #n, #k { width: 60px; }
+
+  </style>
+
+  </head>
+  <body>
+    <h1>Rhythm Necklaces</h1>
+
+    <p>
+      <label for="n">n:</label> <input type="number" id="n" value="3" min="0">
+      <label for="k">k:</label> <input type="number" id="k" value="2" min="1">
+    </p>
+
+    <p>Total: 
+      <span id="count"></span>
+    </p>
+
+    <div id="vis">
+
+    </div>
+
+    <script src="scripts/d3.min.js"></script>
+    <script src="scripts/data-rhythm.js"></script>
+    <script>
+    function paintInverse(n){
+
+      return n
+        .replace(/0/g, `o`)
+        .replace(/1/g, `0`)
+        .replace(/o/g, `1`)
+
+    }
+    let count = 4
+    let next = []
+    for (let i = 1; i <= count; i++) {
+
+      let go = makeNecklace(i,2)
+
+      for (let j = 0; j < go.length; j++) {
+
+        next.push(go[j].join(""))
+      }
+    } 
+
+    next = next.map(a => rotateSeq(a))
+
+  for (let i = 0; i < next.length; i++) {
+  next[i].reverse()
+  next[i] = next[i].map(a => paintInverse(a)
+  .split(""))
+ next[i] = next[i].map(a => a.map(b => +b))
+  }
+       
+   
+      var w = 750, //height
+          h = 600, //width
+          p = 5.5, //p?
+          r = w / 20 - 2 * p, //radius?
+          fill = d3.scale
+      .ordinal()
+      .range(["#000", "#fff", "#00f", "#0f0", "#f00"].concat(d3.scale.category20().range()));
+
+      var svg = d3.select("#vis").append("svg")
+      .attr("width", w + 2 * p)
+      .attr("height", h + 2 * p);
+
+      svg.append("g")
+        .attr("transform", "translate(" + [r + p, r + p] + ")");
+
+      d3.selectAll("#n, #k")
+        .on("change", changeHandler(update))
+        .on("click", changeHandler(update));
+
+      update();
+
+      function changeHandler(action) {
+        return function() {
+          var a = "value",
+              b = "defaultValue";
+          if (this.type === "checkbox") {
+            a = "checked";
+            b = "defaultChecked";
+          }
+          if (this[a] === this[b]) return;
+          action();
+          this[b] = this[a];
+        };
+      }
+
+      function update() {
+        var n = +d3.select("#n").property("value"), // number of beads
+            k = +d3.select("#k").property("value"); // number of colours
+        fill.domain(d3.range(k));
+
+        var data = next[n];
+
+      
+        var necklace = svg
+        .attr("height", Math.ceil(data.length / 10) * (2 * r + 4 * p) + r)
+        .select("g").selectAll("g")
+        .data(data, function(d) { return d.join(""); });
+        necklace.enter().append("g")
+          .append("circle")
+          .attr("cy", r)
+          .attr("r", r);
+        necklace.exit().remove();
+        necklace.attr("transform", function(d, i) { return "translate(" + (2 * r + 4 * p) * (i % 10) + "," + (2 * r + 4 * p) * ~~(i / 10) + ")"; })
+        var bead = necklace.selectAll("circle.bead")
+        .data(Object);
+        bead.enter().append("circle")
+          .attr("class", "bead")
+          .attr("r", 5);
+        bead.exit().remove();
+        bead.attr("transform", function(d, i) { return "rotate(" + i * 360 / next[n][0].length + " " + [0, r] + ")"; })
+          .style("fill", fill)
+        d3.select("#count").text(paintInverse(next[n][0].join("")));
+      }
+
+      
+      
+      
+      
+    </script>
+
+  </body>
+</html>
